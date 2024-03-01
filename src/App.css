@@ -8,11 +8,32 @@ body {
   background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
+  background-size: 50%;
 }
 .header {
   color: #E6E8E6;
   text-shadow: 2px 2px 4px black;
 }
-.aboutMe {
+.MuiContainer-root.MuiContainer-maxWidthSm.aboutMe {
   color: #CED0CE;
+  margin-bottom: 40px;
+  margin-left: 250px;
+}
+.MuiContainer-root.MuiContainer-maxWidthLg.projectsContainer {
+  margin-left: 40px;
+}
+.MuiCardHeader-root {
+  background-color: #475841;
+  color: #E6E8E6;
+}
+.MuiTypography-root.MuiTypography-body1.MuiCardHeader-subheader {
+color: #9FB8AD;
+}
+.projectsHeader {
+  color: #E6E8E6;
+}
+.projectCard {
+  max-width: 50%;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
