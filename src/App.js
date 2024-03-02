@@ -1,26 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-import { Card, CardContent, CardHeader, CardMedia, Container, Typography } from '@mui/material';
+import { Card, CardContent, CardHeader, CardMedia, Container, Link, Typography } from '@mui/material';
 
-function App() {
+
+
+export const App = () => {
+
+
+
+
   return (
     <>
-      <Typography className='header' variant='h2' align='left' marginTop={10} marginLeft={15}>
+      <Typography className='header' variant='h1' align='center' marginTop={10}>
         Hi, I'm Nic. Welcome to my site.
       </Typography>
-      <Container className="aboutMe" maxWidth="sm" sx={{ marginTop: 6 }}>
-        <Typography variant='body1'>
+      <Container className="aboutMe" maxWidth="lg">
+        <Typography variant='h5'>
           I'm a junior full stack developer new to the world of tech. I've spent the last decade or so in the retail business developing skills in team building and customer service. In 2023 I took an exciting leap into a new career path with the help of a software development program available to people here in my home state of West Virginia called NewForce. This site is dedicated to showing you some of the work I've accomplished, as well as a way for anyone to contact me with any questions.
         </Typography>
       </Container>
       <Container className='projectsContainer'>
         <Typography className='projectsHeader' variant='h5'>
-          Here's a few of the projects I've worked on:
+          Here's a few of the projects I've developed:
         </Typography>
         <Card className='projectCard'>
-          <CardHeader
-            title="Pop-Up Magic Shop"
-            subheader="My Front End Capstone Project" />
+          <Link underline='hover' color='inherit' target='_blank' rel='noopener noreferrer' href="https://github.com/Nic338/Pop-Up-Magic-Shop">
+            <CardHeader
+              title="Pop-Up Magic Shop"
+              subheader="My Front End Capstone Project" />
+          </Link>
           <CardMedia
             component="img"
             height='250'
@@ -37,9 +45,11 @@ function App() {
           </CardContent>
         </Card>
         <Card className='projectCard'>
+          <Link underline='hover' color='inherit' target='_blank' rel='noopener noreferrer' href='https://github.com/Nic338/LegendLore'>
           <CardHeader
             title="Legend Lore"
             subheader="My Full Stack Capstone Project" />
+            </Link>
           <CardMedia
             component='img'
             height='250'
@@ -61,4 +71,3 @@ function App() {
   );
 }
 
-export default App;

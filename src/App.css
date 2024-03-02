@@ -14,23 +14,35 @@ body {
   color: #E6E8E6;
   text-shadow: 2px 2px 4px black;
 }
-.MuiContainer-root.MuiContainer-maxWidthSm.aboutMe {
+.MuiContainer-root.MuiContainer-maxWidthLg.aboutMe {
   color: #CED0CE;
   margin-bottom: 40px;
-  margin-left: 250px;
+  margin-left: 200px;
+  margin-top: 60px;
+  align-content: center;
+  text-shadow: 2px 2px 4px black;
 }
 .MuiContainer-root.MuiContainer-maxWidthLg.projectsContainer {
-  margin-left: 40px;
+  margin-top: 100px;
+  margin-left: 220px;
 }
-.MuiCardHeader-root {
+.MuiCardHeader-root{
   background-color: #475841;
   color: #E6E8E6;
+  text-shadow: 2px 2px 4px black;
 }
+.MuiCardContent-root{
+  background-color: #475841;
+  color: #E6E8E6;
+  text-shadow: 2px 2px 4px black;
+}
+
 .MuiTypography-root.MuiTypography-body1.MuiCardHeader-subheader {
 color: #9FB8AD;
 }
 .projectsHeader {
   color: #E6E8E6;
+  text-shadow: 2px 2px 4px black;
 }
 .projectCard {
   max-width: 50%;
