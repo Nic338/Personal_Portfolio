@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import { Card, CardContent, CardHeader, CardMedia, Container, Link, Typography } from '@mui/material';
-
+import { AppBar, Box, Card, CardContent, CardHeader, CardMedia, Container, IconButton, Link, Toolbar, Typography } from '@mui/material';
+import { Menu } from '@mui/icons-material'
 
 
 export const App = () => {
@@ -11,6 +11,15 @@ export const App = () => {
 
   return (
     <>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position='static'>
+      <Toolbar sx={{background: '#9FB8AD'}}>
+        <IconButton>
+          <Menu />
+        </IconButton>
+      </Toolbar>
+      </AppBar>
+    </Box>
       <Typography className='header' variant='h1' align='center' marginTop={10}>
         Hi, I'm Nic. Welcome to my site.
       </Typography>
