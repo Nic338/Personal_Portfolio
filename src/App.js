@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './App.css';
-import { AppBar, Box, Card, CardContent, CardHeader, CardMedia, Container, IconButton, Link, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Card, CardContent, CardHeader, CardMedia, Container, Grid, Icon, IconButton, Link, Toolbar, Typography } from '@mui/material';
 import { Menu } from '@mui/icons-material'
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export const App = () => {
 
@@ -11,15 +12,30 @@ export const App = () => {
 
   return (
     <>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static'>
-      <Toolbar sx={{background: '#9FB8AD'}}>
-        <IconButton>
-          <Menu />
-        </IconButton>
-      </Toolbar>
-      </AppBar>
-    </Box>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position='static'>
+          <Toolbar sx={{ background: '#475841' }}>
+            <Grid>
+              <IconButton
+              size='large'
+              edge='start'
+              color='inherit'
+              aria-label='menu'
+              sx={{mr: 2 }}>
+                <Menu sx={{ color: '#E6E8E6' }} />
+              </IconButton>
+            </Grid>
+            <Grid container justifyContent='flex-end'>
+              <Link color="inherit" underline='hover' target='_blank' rel='noopener noreferrer' href='https://github.com/Nic338'>
+                <GitHubIcon sx={{marginRight: 2}} fontSize='large'/>
+              </Link>
+              <Link color="inherit" underline='hover' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/nic-myers/'>
+                <LinkedInIcon sx={{marginRight: 1}} fontSize='large'/>
+              </Link>
+            </Grid>
+          </Toolbar>
+        </AppBar>
+      </Box>
       <Typography className='header' variant='h1' align='center' marginTop={10}>
         Hi, I'm Nic. Welcome to my site.
       </Typography>
@@ -55,10 +71,10 @@ export const App = () => {
         </Card>
         <Card className='projectCard'>
           <Link underline='hover' color='inherit' target='_blank' rel='noopener noreferrer' href='https://github.com/Nic338/LegendLore'>
-          <CardHeader
-            title="Legend Lore"
-            subheader="My Full Stack Capstone Project" />
-            </Link>
+            <CardHeader
+              title="Legend Lore"
+              subheader="My Full Stack Capstone Project" />
+          </Link>
           <CardMedia
             component='img'
             height='250'
