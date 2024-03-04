@@ -78,13 +78,16 @@ height: 158px;
   color: #E6E8E6;
   text-shadow: 2px 2px 4px black;
 }
-
 .MuiTypography-root.MuiTypography-body1.MuiCardHeader-subheader {
 color: #9FB8AD;
 }
 .projectsHeader {
   color: #E6E8E6;
   text-shadow: 2px 2px 4px black;
+}
+.projectsDisclaimer {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .projectCard {
   max-width: 50%;

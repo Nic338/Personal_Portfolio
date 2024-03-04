@@ -48,6 +48,9 @@ export const App = () => {
         <Typography className='projectsHeader' variant='h5'>
           Here's a few of the projects I've developed:
         </Typography>
+        <Typography className='projectsDisclaimer projectsHeader' variant='subtitle1'>
+          Click a book on the bookshelf to check out one of my projects, or click the index button to see the list of projects instead
+        </Typography>
         <div className='bookshelfBackground'>
           <Tooltip title='Legend Lore' placement='top-start'>
           <div className='book legendLoreBook'></div>
