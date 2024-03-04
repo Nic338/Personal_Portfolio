@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { AppBar, Box, Card, CardContent, CardHeader, CardMedia, Container, Grid, Icon, IconButton, Link, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Card, CardContent, CardHeader, CardMedia, Container, Grid, Icon, IconButton, Link, Toolbar, Tooltip, Typography } from '@mui/material';
 import { Menu } from '@mui/icons-material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -48,7 +48,15 @@ export const App = () => {
         <Typography className='projectsHeader' variant='h5'>
           Here's a few of the projects I've developed:
         </Typography>
-        <Card className='projectCard'>
+        <div className='bookshelfBackground'>
+          <Tooltip title='Legend Lore' placement='top-start'>
+          <div className='book legendLoreBook'></div>
+          </Tooltip>
+          <Tooltip title='Pop-Up Magic Shop' placement='top-start'>
+          <div className='book magicShopBook'></div>
+          </Tooltip>
+        </div>
+        {/* <Card className='projectCard'>
           <Link underline='hover' color='inherit' target='_blank' rel='noopener noreferrer' href="https://github.com/Nic338/Pop-Up-Magic-Shop">
             <CardHeader
               title="Pop-Up Magic Shop"
@@ -90,8 +98,9 @@ export const App = () => {
               and C# and TSQL in the back end.
             </Typography>
           </CardContent>
-        </Card>
+        </Card> */}
       </Container>
+      <footer>Image by <a href="https://www.freepik.com/free-vector/hand-drawn-shelves-full-books_847565.htm#query=bookshelf%20png&position=47&from_view=keyword&track=ais&uuid=66c3b4c7-22c2-4dbf-b544-065d9c8bd58d">Freepik</a></footer>
     </>
   );
 }
