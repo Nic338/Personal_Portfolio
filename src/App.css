@@ -1,14 +1,16 @@
 html {
   background-color: #3F403F;
+  height: 100%;
+  width: 100%;
 }
 body {
   background-image: url('/src/img/sillyheadshot1.png');
-  background-size: contain;
+  background-size: 46%;
   background-position: bottom right;
   background-repeat: no-repeat;
   position: relative;
   min-height: 100vh;
-  background-size: 45%;
+  overflow: auto;
 }
 .header {
   color: #E6E8E6;
@@ -16,21 +18,26 @@ body {
 }
 .MuiContainer-root.MuiContainer-maxWidthLg.aboutMe {
   color: #CED0CE;
-  margin-bottom: 40px;
+  margin-bottom: 200px;
   margin-left: 200px;
   margin-top: 60px;
   align-content: center;
   text-shadow: 2px 2px 4px black;
+  display: flex;
+  flex-direction: column;
 }
 .MuiContainer-root.MuiContainer-maxWidthLg.projectsContainer {
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: 65px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .bookshelfBackground {
   box-sizing: border-box;
-  height: 100vh;
-  background: url('/src/img/bookshelf.png');
+  min-height: 100%;
+  background: url('/src/img/bookshelf2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -40,14 +47,14 @@ body {
   cursor: pointer;
 }
 .magicShopBook {
- top: 690px;
- left: 706px;
+ top: 756px;
+ left: 708px;
  width: 58px;
  height: 168px;
 }
 .legendLoreBook {
-top: 690px;
-left: 350px;
+top: 758px;
+left: 331px;
 width: 77px;
 height: 158px;
 }
@@ -92,4 +99,5 @@ color: #9FB8AD;
 .projectCard {
   max-width: 50%;
   margin-top: 50px;
+  margin-left: 120px;
 }

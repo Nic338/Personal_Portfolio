@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import './App.css';
-import { AppBar, Box, Card, CardContent, CardHeader, CardMedia, Container, Grid, Icon, IconButton, Link, Toolbar, Tooltip, Typography } from '@mui/material';
+import { AppBar, Box, Button, Card, CardContent, CardHeader, CardMedia, Container, Grid, Icon, IconButton, Link, Stack, Toolbar, Tooltip, Typography } from '@mui/material';
 import { Menu } from '@mui/icons-material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export const App = () => {
 
-
+const [showIndex, setShowIndex] = useState(false);
 
 
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position='static'>
+        <AppBar position='relative'>
           <Toolbar sx={{ background: '#475841' }}>
             <Grid>
               <IconButton
@@ -50,7 +50,13 @@ export const App = () => {
         </Typography>
         <Typography className='projectsDisclaimer projectsHeader' variant='subtitle1'>
           Click a book on the bookshelf to check out one of my projects, or click the index button to see the list of projects instead
+        <Button className='indexButton' sx={{
+          marginLeft:10,
+          color: '#E6E8E6',
+          textShadow: '2 2 2 4 black'
+           }} onClick={()=>setShowIndex(!showIndex)}>Index</Button>
         </Typography>
+        {!showIndex ? 
         <div className='bookshelfBackground'>
           <Tooltip title='Legend Lore' placement='top-start'>
           <div className='book legendLoreBook'></div>
@@ -59,7 +65,9 @@ export const App = () => {
           <div className='book magicShopBook'></div>
           </Tooltip>
         </div>
-        {/* <Card className='projectCard'>
+        :
+        <>
+        <Card className='projectCard'>
           <Link underline='hover' color='inherit' target='_blank' rel='noopener noreferrer' href="https://github.com/Nic338/Pop-Up-Magic-Shop">
             <CardHeader
               title="Pop-Up Magic Shop"
@@ -101,7 +109,8 @@ export const App = () => {
               and C# and TSQL in the back end.
             </Typography>
           </CardContent>
-        </Card> */}
+        </Card> 
+        </>}
       </Container>
       <footer>Image by <a href="https://www.freepik.com/free-vector/hand-drawn-shelves-full-books_847565.htm#query=bookshelf%20png&position=47&from_view=keyword&track=ais&uuid=66c3b4c7-22c2-4dbf-b544-065d9c8bd58d">Freepik</a></footer>
     </>
