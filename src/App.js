@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import { AppBar, Box, Button, Card, CardContent, CardHeader, CardMedia, Container, Dialog, DialogContent, Grid, Icon, IconButton, Link, Stack, Toolbar, Tooltip, Typography } from '@mui/material';
-import { Menu } from '@mui/icons-material'
+import { AppBar, Box, Button, Card, CardContent, CardHeader, CardMedia, Container, Dialog, DialogContent, DialogContentText, Grid, Icon, IconButton, Link, Stack, Toolbar, Tooltip, Typography } from '@mui/material';
+import { Book, Menu } from '@mui/icons-material'
 import Backdrop from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -126,9 +126,12 @@ export const App = () => {
           open={openBook} 
           disableBackdropClick={false} 
           onClose={handleCloseBook}
+          sx={{backgroundImage:{BookImage}}}
           >
             <DialogContent className='bookDialog'>
-              <img src={BookImage}></img>
+              <DialogContentText className='bookText'>
+                This is text inside the dialog. If I keep typing where does the text go. This is text inside the dialog. If I keep typing where does the text go.This is text inside the dialog. If I keep typing where does the text go.This is text inside the dialog. If I keep typing where does the text go.This is text inside the dialog. If I keep typing where does the text go.
+              </DialogContentText>
             </DialogContent>
           </Dialog>
       </Container>

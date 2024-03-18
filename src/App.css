@@ -101,7 +101,21 @@ color: #9FB8AD;
   margin-top: 50px;
   margin-left: 120px;
 }
-.MuiPaper-root.MuiPaper-elevation {
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthTrue {
 background-color: transparent;
 box-shadow: none;
+background-image: url('img/blank-book.png');
+background-size: 100%;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+min-height: 90vh;
+min-width: 70vw;
+}
+.bookText {
+  padding-top: 150px;
+  padding-left: 90px;
+  max-width: 27vw;
 }
