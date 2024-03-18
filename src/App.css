@@ -101,7 +101,7 @@ color: #9FB8AD;
   margin-top: 50px;
   margin-left: 120px;
 }
-.MuiDialogContent-root {
+.MuiPaper-root.MuiPaper-elevation {
 background-color: transparent;
 box-shadow: none;
 }
