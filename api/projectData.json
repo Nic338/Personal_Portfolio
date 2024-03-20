@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Legend Lore",
+            "description": "A full stack app built as a tool for the popular table top roleplaying game Dungeons and Dragons. Legend Lore is an interactive D&D 5e world building and campaign management app for DMs made to help keep your story ideas and thoughts organized and easily accessible. This project was built with React.js in the front end and C# and TSQL in the back end.",
+            "images" : [
+                "../src/img/landingpage-backend-ss.png"
+            ],
+            "gitHubLink": "https://github.com/Nic338/LegendLore"
+        },
+        {
+            "id": 2,
+            "name": "Pop Up Magic Shop",
+            "description": "My app I built as a tool for the popular table top roleplaying game Dungeons and Dragons 5e. Specifically made to help the person running the game generate item shops at random based on certain parameters set within the home page of the app to use during their sessions. This project was built with React.js and JSON server as a mock API, as well an open API source.",
+            "images": [
+                "../src/img/intro-frontend-ss.png"
+            ],
+            "gitHubLink": "https://github.com/Nic338/Pop-Up-Magic-Shop"
+        }
+    ]
+}

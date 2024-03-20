@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { AppBar, Box, Button, Card, CardContent, CardHeader, CardMedia, Container, Dialog, DialogContent, DialogContentText, Grid, Icon, IconButton, Link, Stack, Toolbar, Tooltip, Typography } from '@mui/material';
 import { Book, Menu } from '@mui/icons-material'
@@ -6,10 +6,18 @@ import Backdrop from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import BookImage from './img/blank-book.png'
+import { getProjects } from './dataAccess';
+
 export const App = () => {
 
   const [showIndex, setShowIndex] = useState(false);
   const [openBook, setOpenBook] = useState(false);
+  const [project, setProject] = useState([]);
+
+  useEffect(() => {
+    getProjects()
+    .then((projectsArray) => setProject(projectsArray))
+  },[])
 
   const handleOpenBook = () => {
     setOpenBook(true);
