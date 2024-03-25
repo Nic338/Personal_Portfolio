@@ -18,7 +18,7 @@ body {
 }
 .MuiContainer-root.MuiContainer-maxWidthLg.aboutMe {
   color: #CED0CE;
-  margin-bottom: 200px;
+  margin-bottom: 120px;
   margin-left: 200px;
   margin-top: 60px;
   align-content: center;
@@ -29,14 +29,14 @@ body {
 .MuiContainer-root.MuiContainer-maxWidthLg.projectsContainer {
   margin-top: 100px;
   margin-left: 65px;
-  height: 100vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 .bookshelfBackground {
   box-sizing: border-box;
-  min-height: 100%;
+  min-height: 100vh;
   background: url('/src/img/bookshelf2.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -47,13 +47,13 @@ body {
   cursor: pointer;
 }
 .magicShopBook {
- top: 756px;
+ top: 788px;
  left: 708px;
  width: 58px;
  height: 168px;
 }
 .legendLoreBook {
-top: 758px;
+top: 788px;
 left: 331px;
 width: 77px;
 height: 158px;
@@ -97,7 +97,7 @@ color: #9FB8AD;
   padding-bottom: 20px;
 }
 .projectCard {
-  max-width: 50%;
+  max-width: 60%;
   margin-top: 50px;
   margin-left: 120px;
 }
