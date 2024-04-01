@@ -13,17 +13,23 @@ export const App = () => {
   const [showIndex, setShowIndex] = useState(false);
   const [openBook, setOpenBook] = useState(false);
   const [projects, setProject] = useState([]);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     getProjects()
       .then((projectsArray) => setProject(projectsArray))
   }, [])
 
-  const handleOpenBook = () => {
-    setOpenBook(true);
+  const handleOpenBook = (projectId) => {
+    const selectedProject = projects.find(project => project.id === projectId)
+    if (selectedProject) {
+      setOpenBook(true);
+      setSelectedProject(selectedProject);
+    }
   }
   const handleCloseBook = () => {
     setOpenBook(false);
+    setSelectedProject(null);
   }
 
   return (
@@ -75,10 +81,10 @@ export const App = () => {
         {!showIndex ?
           <div className='bookshelfBackground'>
             <Tooltip title='Legend Lore' placement='top-start'>
-              <div className='book legendLoreBook' onClick={handleOpenBook}></div>
+              <div className='book legendLoreBook' onClick={() => {handleOpenBook(1)}}></div>
             </Tooltip>
             <Tooltip title='Pop-Up Magic Shop' placement='top-start'>
-              <div className='book magicShopBook' onClick={handleOpenBook}></div>
+              <div className='book magicShopBook' onClick={() => {handleOpenBook(2)}}></div>
             </Tooltip>
           </div>
           :
@@ -127,22 +133,20 @@ export const App = () => {
               </CardContent>
             </Card>
           </>}
-        {projects.map((project) =>
+        
           <Dialog
             className='bookDialogBox'
             maxWidth='true'
             open={openBook}
             onClose={handleCloseBook}
             sx={{ backgroundImage: { BookImage } }}
-            key={project.id}
           >
             <DialogContent className='bookDialog'>
               <DialogContentText className='bookText'>
-                {project.description}
+                {selectedProject && selectedProject.description}
               </DialogContentText>
             </DialogContent>
           </Dialog>
-        )}
       </Container>
       <footer>Image by <a href="https://www.freepik.com/free-vector/hand-drawn-shelves-full-books_847565.htm#query=bookshelf%20png&position=47&from_view=keyword&track=ais&uuid=66c3b4c7-22c2-4dbf-b544-065d9c8bd58d">Freepik</a></footer>
     </>
